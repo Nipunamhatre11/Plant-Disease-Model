@@ -34,4 +34,4 @@ try:
         st.success("Model evaluation complete! (Add your class labels to see the exact disease name)")
 except Exception as e:
     # EXACT CHANGE HERE: Updated the error message string to match your .keras filename
-    st.error(f"Could not load the model file. Make sure 'efficientnet_plant_disease_model.keras' is uploaded to your repository. Error: {e}")
+    st.error(f"Could not load the model file. Make sure 'final_balanced_plant_model.keras' is uploaded to your repository. Error: {e}")
