@@ -9,8 +9,8 @@ st.write("Upload a leaf image to detect potential diseases using our deep learni
 # 1. Load your trained model
 @st.cache_resource
 def load_my_model():
-    # Make sure your model file is uploaded to GitHub with this exact name!
-    return tf.keras.models.load_model('efficientnet_plant_disease_model.keras')
+    # Looking for your updated .keras file name now!
+    return tf.keras.models.load_model('final_balanced_plant_model.keras')
 try:
     model = load_my_model()
     
@@ -33,4 +33,5 @@ try:
         predictions = model.predict(img_array)
         st.success("Model evaluation complete! (Add your class labels to see the exact disease name)")
 except Exception as e:
-    st.error(f"Could not load the model file. Make sure 'plant_disease_model.h5' is uploaded to your repository. Error: {e}")
+    # EXACT CHANGE HERE: Updated the error message string to match your .keras filename
+    st.error(f"Could not load the model file. Make sure 'efficientnet_plant_disease_model.keras' is uploaded to your repository. Error: {e}")
