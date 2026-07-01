@@ -10,8 +10,7 @@ st.write("Upload a leaf image to detect potential diseases using our deep learni
 @st.cache_resource
 def load_my_model():
     # Make sure your model file is uploaded to GitHub with this exact name!
-    return tf.keras.models.load_model('plant_disease_model.h5')
-
+    return tf.keras.models.load_model('efficientnet_plant_disease_model.keras')
 try:
     model = load_my_model()
     
